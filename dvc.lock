@@ -52,3 +52,27 @@ stages:
       hash: md5
       md5: 9b872bbf9586a3a85e3fe129d065b5e6
       size: 1183
+  test:
+    cmd: python3 src/test.py 0.9
+    deps:
+    - path: dataset/test.csv
+      hash: md5
+      md5: b1b46ddcf789f41af7df1495cf4f8ace
+      size: 2590
+    - path: models/model.bin
+      hash: md5
+      md5: 687beb3ce13185935ff3a4efebe82c3b
+      size: 251876
+    - path: src/test.py
+      hash: md5
+      md5: 92a126c1e9a447f8a29c35ffd522a8c6
+      size: 1348
+    outs:
+    - path: metrics/test_metrics.json
+      hash: md5
+      md5: 929295bded88d4ae9871c81759a9c141
+      size: 85
+    - path: plots/confusion_matrix.csv
+      hash: md5
+      md5: 10cda321ee47218c5aa9d73143a1b949
+      size: 209
